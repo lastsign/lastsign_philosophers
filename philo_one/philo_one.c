@@ -12,8 +12,8 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <Windows.h>
 #include <stdlib.h>
-#include <pthread.h>
 #include "philo_one.h"
 
 int		ft_atoi(const char *str)
