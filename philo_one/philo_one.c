@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <unistd.h>
+#include <io.h>
 #include <Windows.h>
 #include <stdlib.h>
 #include "philo_one.h"
@@ -66,10 +66,13 @@ void	check_argums(int argc, char **argv)
 
 int		get_info_from_argum(int argc, char **argv, t_state *state)
 {
-	static pthread_mutex_t death = PTHREAD_MUTEX_INITIALIZER;
-	static pthread_mutex_t out = PTHREAD_MUTEX_INITIALIZER;
-	static pthread_mutex_t stat = PTHREAD_MUTEX_INITIALIZER;
+	pthread_mutex_t death;
+	pthread_mutex_t out;
+	pthread_mutex_t stat;
 
+	death = pthread_mutex_init(&death, NULL);
+	death = pthread_mutex_init(&out, NULL);
+	death = pthread_mutex_init(&stat, NULL);
 	state->is_died = 0;
 	state->num_philo = ft_atoi(argv[1]);
 	state->time_die = ft_atoi(argv[2]);
@@ -124,7 +127,7 @@ void 	*check_mortality(void* stat)
 	while (1)
 	{
 		pthread_mutex_lock(&philo->state->stat);
-		if (get_current_time() - philo->state->must_eat > philo->state->time_die)
+		if (get_current_time() - philo->meal_last > philo->state->time_die)
 			break ;
 		pthread_mutex_unlock(&philo->state->stat);
 		usleep(10);
@@ -141,7 +144,7 @@ void 	*check_mortality(void* stat)
 void	enjoy_fork(t_philo *philo, int fl, int fr)
 {
 	pthread_mutex_lock(&philo->state->fokes[fl]);
-	print_stat(" took fork in hand\n", philo);
+	print_stat(" has taken a fork\n", philo);
 	pthread_mutex_lock(&philo->state->fokes[fr]);
 }
 
@@ -161,7 +164,7 @@ void	enjoy_meal(t_philo *philo)
 	int 	r;
 
 	l = philo->id;
-	r = (philo->state->num_philo + 1) % philo->state->num_philo;
+	r = (philo->id + 1) % philo->state->num_philo;
 	if (philo->id % 2 == 0)
 		enjoy_fork(philo, l, r);
 	else
@@ -170,6 +173,7 @@ void	enjoy_meal(t_philo *philo)
 	pthread_mutex_lock(&philo->state->stat);
 	philo->meal_last = get_current_time();
 	pthread_mutex_unlock(&philo->state->stat);
+	enjoy_sleep(philo);
 	pthread_mutex_unlock(&philo->state->fokes[l]);
 	pthread_mutex_unlock(&philo->state->fokes[r]);
 }
@@ -210,13 +214,13 @@ void 	init_philo(t_state *state)
 	pthread_t		pthread[state->num_philo];
 
 	i = -1;
-	state->meal_start = get_current_time();
 	state->fokes = fork;
+	stat->is_dead = 0;
 	while (++i < state->num_philo)
 	{
 		philo[i].id = i;
 		philo[i].state = state;
-		philo[i].meal_last = state->meal_start;
+		philo[i].must_eat = state->must_eat;
 		pthread_create(&pthread[i], NULL, start_simulation, &philo[i]);
 	}
 	i = -1;

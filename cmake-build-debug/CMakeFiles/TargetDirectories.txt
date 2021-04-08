@@ -1,0 +1,3 @@
+C:/Users/79199/projects/Philosophers/cmake-build-debug/CMakeFiles/philo_one.dir
+C:/Users/79199/projects/Philosophers/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/79199/projects/Philosophers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
