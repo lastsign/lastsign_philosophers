@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_.h"
+#include "philo_two.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -100,7 +100,7 @@ int		get_info_from_argum(int argc, char **argv, t_state *state)
 		state->must_eat = -1;
 	if (!state->num_philo || !state->time_die || !state->time_eat || !state->time_sleep || !state->must_eat)
 		return (0);
-	if !(init_semaphoras(state))
+	if (!init_semaphoras(state))
 		return (0);
 	return (1);
 }
@@ -117,6 +117,7 @@ void 	enjoy_write(char *mes, t_philo *philo)
 	if (!philo->state->is_died)
 	{
 		write(1, print_str_time, ft_strlen(print_str_time));
+		write(1, " ", 1);
 		write(1, print_id, ft_strlen(print_id));
 		write(1, mes, ft_strlen(mes));
 	}
@@ -126,9 +127,9 @@ void 	enjoy_write(char *mes, t_philo *philo)
 
 void 	print_stat(char *mes, t_philo *philo)
 {
-	pthread_mutex_lock(&philo->state->out);
+	sem_wait(philo->state->out);
 	enjoy_write(mes, philo);
-	pthread_mutex_unlock(&philo->state->out);
+	sem_post(philo->state->out);
 }
 
 void 	*check_mortality(void* stat)
@@ -138,18 +139,18 @@ void 	*check_mortality(void* stat)
 	philo = (t_philo *)stat;
 	while (1)
 	{
-		sem_wait(&philo->state->stat);
+		sem_wait(philo->state->stat);
 		if (get_current_time() - philo->meal_last > philo->state->time_die)
 			break ;
-		sem_post(&philo->state->stat);
+		sem_post(philo->state->stat);
 		usleep(10);
 	}
-	sem_post(&philo->state->stat);
+	sem_post(philo->state->stat);
 	if (!philo->state->must_eat)
 		return (NULL);
 	print_stat(" is dead\n", philo);
 	philo->state->is_died = 1;
-	sem_post(&philo->state->death);
+	sem_post(philo->state->death);
 	return (NULL);
 }
 
@@ -166,9 +167,9 @@ void 	enjoy_sleep(t_philo *philo)
 void	enjoy_meal(t_philo *philo)
 {
 	sem_wait(philo->state->wait);
-	sem_wait(philo->state->fokes);
+	sem_wait(philo->state->forks);
 	print_stat(" has taken a fork\n", philo);
-	sem_wait(philo->state->fokes);
+	sem_wait(philo->state->forks);
 	print_stat(" has taken a fork\n", philo);
 	sem_post(philo->state->wait);
 	print_stat(" start eating\n", philo);
@@ -176,8 +177,8 @@ void	enjoy_meal(t_philo *philo)
 	philo->meal_last = get_current_time();
 	pthread_mutex_unlock(&philo->state->stat);
 	enjoy_sleep(philo);
-	sem_post(philo->state->fokes);
-	sem_post(philo->state->fokes);
+	sem_post(philo->state->forks);
+	sem_post(philo->state->forks);
 }
 
 
@@ -215,7 +216,7 @@ void 	init_philo(t_state *state)
 	pthread_t		pthread[state->num_philo];
 
 	i = -1;
-	stat->is_dead = 0;
+	state->is_died = 0;
 	while (++i < state->num_philo)
 	{
 		philo[i].id = i;
@@ -226,7 +227,7 @@ void 	init_philo(t_state *state)
 	i = -1;
 	while (++i < state->num_philo)
 		pthread_join(pthread[i], NULL);
-	sem_close(state->fokes);
+	sem_close(state->forks);
 	sem_close(state->wait);
 	sem_close(state->out);
 	sem_close(state->stat);

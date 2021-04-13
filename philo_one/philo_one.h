@@ -12,7 +12,7 @@
 
 #ifndef PHILO_ONE_H
 # define PHILO_ONE_H
-# include <thread.h>
+# include <pthread.h>
 
 typedef struct		s_state
 {
@@ -21,7 +21,6 @@ typedef struct		s_state
 	int 			time_eat;
 	int				time_sleep;
 	int	 			must_eat;
-	long 			meal_start;
 	int 			is_died;
 	pthread_mutex_t *fokes;
 	pthread_mutex_t death;

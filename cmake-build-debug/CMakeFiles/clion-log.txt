@@ -1,7 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2021.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\79199\projects\Philosophers
-CMake Error at CMakeLists.txt:6:
-  Parse error.  Expected a newline, got identifier with text
-  "add_executable".
-
-
--- Configuring incomplete, errors occurred!
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/ptycho/Documents/42cursus/lastsign_philosophers
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug

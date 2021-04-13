@@ -12,7 +12,8 @@
 
 #ifndef PHILO_TWO_H
 # define PHILO_TWO_H
-# include <semaphore>
+# include <semaphore.h>
+# include <pthread.h>
 
 typedef struct		s_state
 {
@@ -23,7 +24,7 @@ typedef struct		s_state
 	int	 			must_eat;
 	long 			meal_start;
 	int 			is_died;
-	sem_t			*fokes;
+	sem_t			*forks;
 	sem_t			*death;
 	sem_t			*out;
 	sem_t			*stat;

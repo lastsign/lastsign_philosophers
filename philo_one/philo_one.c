@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <io.h>
-#include <Windows.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include "philo_one.h"
 
@@ -70,9 +69,9 @@ int		get_info_from_argum(int argc, char **argv, t_state *state)
 	pthread_mutex_t out;
 	pthread_mutex_t stat;
 
-	death = pthread_mutex_init(&death, NULL);
-	death = pthread_mutex_init(&out, NULL);
-	death = pthread_mutex_init(&stat, NULL);
+	pthread_mutex_init(&death, NULL);
+	pthread_mutex_init(&out, NULL);
+	pthread_mutex_init(&stat, NULL);
 	state->is_died = 0;
 	state->num_philo = ft_atoi(argv[1]);
 	state->time_die = ft_atoi(argv[2]);
@@ -105,6 +104,7 @@ void 	enjoy_write(char *mes, t_philo *philo)
 	if (!philo->state->is_died)
 	{
 		write(1, print_str_time, ft_strlen(print_str_time));
+		write(1, " ", 1);
 		write(1, print_id, ft_strlen(print_id));
 		write(1, mes, ft_strlen(mes));
 	}
@@ -135,7 +135,7 @@ void 	*check_mortality(void* stat)
 	pthread_mutex_unlock(&philo->state->stat);
 	if (!philo->state->must_eat)
 		return (NULL);
-	print_stat(" is dead\n", philo);
+	print_stat(" is died\n", philo);
 	philo->state->is_died = 1;
 	pthread_mutex_unlock(&philo->state->death);
 	return (NULL);
@@ -170,7 +170,7 @@ void	enjoy_meal(t_philo *philo)
 		enjoy_fork(philo, l, r);
 	else
 		enjoy_fork(philo, r, l);
-	print_stat(" start eating\n", philo);
+	print_stat(" is eating\n", philo);
 	pthread_mutex_lock(&philo->state->stat);
 	philo->meal_last = get_current_time();
 	pthread_mutex_unlock(&philo->state->stat);
@@ -187,7 +187,7 @@ void 	*start_simulation(void *stat)
 
 	philo = (t_philo *)stat;
 	philo->meal_start = get_current_time();
-	philo->meal_last = philo->meal_start;
+	philo->meal_last = get_current_time();
 	pthread_create(&death, NULL, check_mortality, philo);
 	while (philo->must_eat)
 	{
@@ -216,7 +216,7 @@ void 	init_philo(t_state *state)
 
 	i = -1;
 	state->fokes = fork;
-	stat->is_dead = 0;
+	state->is_died = 0;
 	while (++i < state->num_philo)
 	{
 		philo[i].id = i;
