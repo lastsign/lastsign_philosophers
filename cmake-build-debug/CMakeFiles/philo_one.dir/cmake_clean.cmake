@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/philo_one.dir/philo_one/philo_one.c.o"
-  "CMakeFiles/philo_one.dir/philo_one/utils.c.o"
-  "CMakeFiles/philo_one.dir/philo_one/utils_libft.c.o"
-  "philo_one"
+  "CMakeFiles/philo_one.dir/philo_one/philo_one.c.obj"
+  "CMakeFiles/philo_one.dir/philo_one/utils.c.obj"
+  "CMakeFiles/philo_one.dir/philo_one/utils_libft.c.obj"
+  "libphilo_one.dll.a"
+  "philo_one.exe"
+  "philo_one.exe.manifest"
   "philo_one.pdb"
 )
 

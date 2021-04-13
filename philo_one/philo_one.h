@@ -22,7 +22,7 @@ typedef struct		s_state
 	int				time_sleep;
 	int	 			must_eat;
 	int 			is_died;
-	pthread_mutex_t *fokes;
+	pthread_mutex_t *forks;
 	pthread_mutex_t death;
 	pthread_mutex_t out;
 	pthread_mutex_t stat;

@@ -86,9 +86,9 @@ int		get_info_from_argum(int argc, char **argv, t_state *state)
 	state->death = death;
 	state->out = out;
 	state->stat = stat;
-	pthread_mutex_destroy(&death);
-	pthread_mutex_destroy(&out);
-	pthread_mutex_destroy(&stat);
+//	pthread_mutex_destroy(&death);
+//	pthread_mutex_destroy(&out);
+//	pthread_mutex_destroy(&stat);
 	return (1);
 }
 
@@ -149,12 +149,12 @@ void	enjoy_fork(t_philo *philo, int fl, int fr)
 }
 
 
-void 	enjoy_sleep(t_philo *philo)
+void 	enjoy_sleep(int time_todo)
 {
 	long 	start_sleep;
 
 	start_sleep = get_current_time();
-	while (get_current_time() - start_sleep > philo->state->time_sleep)
+	while (get_current_time() - start_sleep > time_todo)
 		usleep(10);
 }
 
@@ -174,9 +174,9 @@ void	enjoy_meal(t_philo *philo)
 	pthread_mutex_lock(&philo->state->stat);
 	philo->meal_last = get_current_time();
 	pthread_mutex_unlock(&philo->state->stat);
-	enjoy_sleep(philo);
-	pthread_mutex_unlock(&philo->state->fokes[l]);
-	pthread_mutex_unlock(&philo->state->fokes[r]);
+	enjoy_sleep(philo->state->time_eat);
+	pthread_mutex_unlock(&philo->state->forks[r]);
+	pthread_mutex_unlock(&philo->state->forks[l]);
 }
 
 
@@ -197,7 +197,7 @@ void 	*start_simulation(void *stat)
 		if (philo->state->is_died)
 			break ;
 		print_stat(" is sleeping\n", philo);
-		enjoy_sleep(philo);
+		enjoy_sleep(philo->state->time_sleep);
 		if (philo->state->is_died)
 			break ;
 		print_stat(" is thinking\n", philo);
@@ -215,7 +215,7 @@ void 	init_philo(t_state *state)
 	pthread_t		pthread[state->num_philo];
 
 	i = -1;
-	state->fokes = fork;
+	state->forks = fork;
 	state->is_died = 0;
 	while (++i < state->num_philo)
 	{
@@ -229,7 +229,7 @@ void 	init_philo(t_state *state)
 		pthread_join(pthread[i], NULL);
 	i = -1;
 	while (++i < state->num_philo)
-		pthread_mutex_destroy(&fork[i]);
+		pthread_mutex_destroy(state->forks[i]);
 }
 
 int		main(int argc, char **argv)

@@ -154,12 +154,12 @@ void 	*check_mortality(void* stat)
 	return (NULL);
 }
 
-void 	enjoy_sleep(t_philo *philo)
+void 	enjoy_sleep(int time_todo)
 {
 	long 	start_sleep;
 
 	start_sleep = get_current_time();
-	while (get_current_time() - start_sleep > philo->state->time_sleep)
+	while (get_current_time() - start_sleep > time_todo)
 		usleep(10);
 }
 
@@ -172,11 +172,11 @@ void	enjoy_meal(t_philo *philo)
 	sem_wait(philo->state->forks);
 	print_stat(" has taken a fork\n", philo);
 	sem_post(philo->state->wait);
-	print_stat(" start eating\n", philo);
+	print_stat(" is eating\n", philo);
 	pthread_mutex_lock(&philo->state->stat);
 	philo->meal_last = get_current_time();
 	pthread_mutex_unlock(&philo->state->stat);
-	enjoy_sleep(philo);
+	enjoy_sleep(philo->state->time_eat);
 	sem_post(philo->state->forks);
 	sem_post(philo->state->forks);
 }
@@ -189,7 +189,7 @@ void 	*start_simulation(void *stat)
 
 	philo = (t_philo *)stat;
 	philo->meal_start = get_current_time();
-	philo->meal_last = philo->meal_start;
+	philo->meal_last = get_current_time();
 	pthread_create(&death, NULL, check_mortality, philo);
 	while (philo->must_eat)
 	{
@@ -199,7 +199,7 @@ void 	*start_simulation(void *stat)
 		if (philo->state->is_died)
 			break ;
 		print_stat(" is sleeping\n", philo);
-		enjoy_sleep(philo);
+		enjoy_sleep(philo->state->time_sleep);
 		if (philo->state->is_died)
 			break ;
 		print_stat(" is thinking\n", philo);

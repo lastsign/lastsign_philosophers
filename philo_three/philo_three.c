@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_three.h"
+#include "philo_two.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
