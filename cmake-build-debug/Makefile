@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named philo_three
+
+# Build rule for target.
+philo_three: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philo_three
+.PHONY : philo_three
+
+# fast build rule for target.
+philo_three/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/build
+.PHONY : philo_three/fast
+
+#=============================================================================
 # Target rules for targets named philo_two
 
 # Build rule for target.
@@ -237,32 +250,113 @@ philo_one/utils_libft.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/utils_libft.c.s
 .PHONY : philo_one/utils_libft.c.s
 
-philo_two/philo_two.o: philo_two/philo_two.c.o
+philo_three/philo_three.o: philo_three/philo_three.c.o
 
-.PHONY : philo_two/philo_two.o
+.PHONY : philo_three/philo_three.o
 
 # target to build an object file
-philo_two/philo_two.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_two.c.o
-.PHONY : philo_two/philo_two.c.o
+philo_three/philo_three.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/philo_three.c.o
+.PHONY : philo_three/philo_three.c.o
 
-philo_two/philo_two.i: philo_two/philo_two.c.i
+philo_three/philo_three.i: philo_three/philo_three.c.i
 
-.PHONY : philo_two/philo_two.i
+.PHONY : philo_three/philo_three.i
 
 # target to preprocess a source file
-philo_two/philo_two.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_two.c.i
-.PHONY : philo_two/philo_two.c.i
+philo_three/philo_three.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/philo_three.c.i
+.PHONY : philo_three/philo_three.c.i
 
-philo_two/philo_two.s: philo_two/philo_two.c.s
+philo_three/philo_three.s: philo_three/philo_three.c.s
 
-.PHONY : philo_two/philo_two.s
+.PHONY : philo_three/philo_three.s
 
 # target to generate assembly for a file
-philo_two/philo_two.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_two.c.s
-.PHONY : philo_two/philo_two.c.s
+philo_three/philo_three.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/philo_three.c.s
+.PHONY : philo_three/philo_three.c.s
+
+philo_three/utils.o: philo_three/utils.c.o
+
+.PHONY : philo_three/utils.o
+
+# target to build an object file
+philo_three/utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/utils.c.o
+.PHONY : philo_three/utils.c.o
+
+philo_three/utils.i: philo_three/utils.c.i
+
+.PHONY : philo_three/utils.i
+
+# target to preprocess a source file
+philo_three/utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/utils.c.i
+.PHONY : philo_three/utils.c.i
+
+philo_three/utils.s: philo_three/utils.c.s
+
+.PHONY : philo_three/utils.s
+
+# target to generate assembly for a file
+philo_three/utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/utils.c.s
+.PHONY : philo_three/utils.c.s
+
+philo_three/utils_libft.o: philo_three/utils_libft.c.o
+
+.PHONY : philo_three/utils_libft.o
+
+# target to build an object file
+philo_three/utils_libft.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/utils_libft.c.o
+.PHONY : philo_three/utils_libft.c.o
+
+philo_three/utils_libft.i: philo_three/utils_libft.c.i
+
+.PHONY : philo_three/utils_libft.i
+
+# target to preprocess a source file
+philo_three/utils_libft.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/utils_libft.c.i
+.PHONY : philo_three/utils_libft.c.i
+
+philo_three/utils_libft.s: philo_three/utils_libft.c.s
+
+.PHONY : philo_three/utils_libft.s
+
+# target to generate assembly for a file
+philo_three/utils_libft.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/philo_three/utils_libft.c.s
+.PHONY : philo_three/utils_libft.c.s
+
+philo_two/philo_three.o: philo_two/philo_three.c.o
+
+.PHONY : philo_two/philo_three.o
+
+# target to build an object file
+philo_two/philo_three.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_three.c.o
+.PHONY : philo_two/philo_three.c.o
+
+philo_two/philo_three.i: philo_two/philo_three.c.i
+
+.PHONY : philo_two/philo_three.i
+
+# target to preprocess a source file
+philo_two/philo_three.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_three.c.i
+.PHONY : philo_two/philo_three.c.i
+
+philo_two/philo_three.s: philo_two/philo_three.c.s
+
+.PHONY : philo_two/philo_three.s
+
+# target to generate assembly for a file
+philo_two/philo_three.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_three.c.s
+.PHONY : philo_two/philo_three.c.s
 
 philo_two/utils.o: philo_two/utils.c.o
 
@@ -327,6 +421,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... philo_one"
+	@echo "... philo_three"
 	@echo "... philo_two"
 	@echo "... philo_one/philo_one.o"
 	@echo "... philo_one/philo_one.i"
@@ -337,9 +432,18 @@ help:
 	@echo "... philo_one/utils_libft.o"
 	@echo "... philo_one/utils_libft.i"
 	@echo "... philo_one/utils_libft.s"
-	@echo "... philo_two/philo_two.o"
-	@echo "... philo_two/philo_two.i"
-	@echo "... philo_two/philo_two.s"
+	@echo "... philo_three/philo_three.o"
+	@echo "... philo_three/philo_three.i"
+	@echo "... philo_three/philo_three.s"
+	@echo "... philo_three/utils.o"
+	@echo "... philo_three/utils.i"
+	@echo "... philo_three/utils.s"
+	@echo "... philo_three/utils_libft.o"
+	@echo "... philo_three/utils_libft.i"
+	@echo "... philo_three/utils_libft.s"
+	@echo "... philo_two/philo_three.o"
+	@echo "... philo_two/philo_three.i"
+	@echo "... philo_two/philo_three.s"
 	@echo "... philo_two/utils.o"
 	@echo "... philo_two/utils.i"
 	@echo "... philo_two/utils.s"

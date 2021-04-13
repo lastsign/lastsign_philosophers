@@ -77,18 +77,18 @@ include CMakeFiles/philo_two.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/philo_two.dir/flags.make
 
-CMakeFiles/philo_two.dir/philo_two/philo_two.c.o: CMakeFiles/philo_two.dir/flags.make
-CMakeFiles/philo_two.dir/philo_two/philo_two.c.o: ../philo_two/philo_two.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/philo_two.dir/philo_two/philo_two.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_two.dir/philo_two/philo_two.c.o   -c /Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_two.c
+CMakeFiles/philo_two.dir/philo_two/philo_three.c.o: CMakeFiles/philo_two.dir/flags.make
+CMakeFiles/philo_two.dir/philo_two/philo_three.c.o: ../philo_two/philo_three.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/philo_two.dir/philo_two/philo_three.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo_two.dir/philo_two/philo_three.c.o   -c /Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_three.c
 
-CMakeFiles/philo_two.dir/philo_two/philo_two.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_two.dir/philo_two/philo_two.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_two.c > CMakeFiles/philo_two.dir/philo_two/philo_two.c.i
+CMakeFiles/philo_two.dir/philo_two/philo_three.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo_two.dir/philo_two/philo_three.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_three.c > CMakeFiles/philo_two.dir/philo_two/philo_three.c.i
 
-CMakeFiles/philo_two.dir/philo_two/philo_two.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_two.dir/philo_two/philo_two.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_two.c -o CMakeFiles/philo_two.dir/philo_two/philo_two.c.s
+CMakeFiles/philo_two.dir/philo_two/philo_three.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo_two.dir/philo_two/philo_three.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_three.c -o CMakeFiles/philo_two.dir/philo_two/philo_three.c.s
 
 CMakeFiles/philo_two.dir/philo_two/utils.c.o: CMakeFiles/philo_two.dir/flags.make
 CMakeFiles/philo_two.dir/philo_two/utils.c.o: ../philo_two/utils.c
@@ -118,14 +118,14 @@ CMakeFiles/philo_two.dir/philo_two/utils_libft.c.s: cmake_force
 
 # Object files for target philo_two
 philo_two_OBJECTS = \
-"CMakeFiles/philo_two.dir/philo_two/philo_two.c.o" \
+"CMakeFiles/philo_two.dir/philo_two/philo_three.c.o" \
 "CMakeFiles/philo_two.dir/philo_two/utils.c.o" \
 "CMakeFiles/philo_two.dir/philo_two/utils_libft.c.o"
 
 # External object files for target philo_two
 philo_two_EXTERNAL_OBJECTS =
 
-philo_two: CMakeFiles/philo_two.dir/philo_two/philo_two.c.o
+philo_two: CMakeFiles/philo_two.dir/philo_two/philo_three.c.o
 philo_two: CMakeFiles/philo_two.dir/philo_two/utils.c.o
 philo_two: CMakeFiles/philo_two.dir/philo_two/utils_libft.c.o
 philo_two: CMakeFiles/philo_two.dir/build.make

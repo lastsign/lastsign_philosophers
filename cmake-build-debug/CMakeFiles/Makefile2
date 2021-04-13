@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = /Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/philo_three.dir/all
 all: CMakeFiles/philo_two.dir/all
 all: CMakeFiles/philo_one.dir/all
 
@@ -84,10 +85,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/philo_three.dir/clean
 clean: CMakeFiles/philo_two.dir/clean
 clean: CMakeFiles/philo_one.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/philo_three.dir
+
+# All Build rule for target.
+CMakeFiles/philo_three.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8 "Built target philo_three"
+.PHONY : CMakeFiles/philo_three.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/philo_three.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/philo_three.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/philo_three.dir/rule
+
+# Convenience name for target.
+philo_three: CMakeFiles/philo_three.dir/rule
+
+.PHONY : philo_three
+
+# clean rule for target.
+CMakeFiles/philo_three.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/clean
+.PHONY : CMakeFiles/philo_three.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/philo_two.dir
@@ -96,7 +125,7 @@ clean: CMakeFiles/philo_one.dir/clean
 CMakeFiles/philo_two.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8 "Built target philo_two"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12 "Built target philo_two"
 .PHONY : CMakeFiles/philo_two.dir/all
 
 # Build rule for subdir invocation for target.
