@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo_three.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ptycho <marvin@42.fr>                     +#+  +:+       +#+         */
+/*   By: ptycho <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 21:11:00 by ptycho           #+#    #+#             */
-/*   Updated: 2021/04/13 21:11:00 by ptycho          ###   ########.fr       */
+/*   Created: 2021/04/14 13:01:00 by ptycho            #+#    #+#             */
+/*   Updated: 2021/04/14 13:01:00 by ptycho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ typedef struct		s_philo
 long 				get_current_time(void);
 char				*ft_itoa(long n);
 size_t				ft_strlen(const char *str);
-
 
 #endif

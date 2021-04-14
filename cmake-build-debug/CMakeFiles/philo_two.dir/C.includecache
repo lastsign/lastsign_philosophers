@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_two.c
+philo_two.h
+/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_two.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+
+/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_two.h
+semaphore.h
+-
+pthread.h
+-
+
+/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/utils.c
+sys/time.h
+-
+
+/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/utils_libft.c
+stdlib.h
+-
+

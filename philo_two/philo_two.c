@@ -159,7 +159,7 @@ void 	enjoy_sleep(int time_todo)
 	long 	start_sleep;
 
 	start_sleep = get_current_time();
-	while (get_current_time() - start_sleep > time_todo)
+	while (get_current_time() - start_sleep < time_todo)
 		usleep(10);
 }
 
