@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/79199/projects/Philosophers/philo_three/philo_three.c" "C:/Users/79199/projects/Philosophers/cmake-build-debug/CMakeFiles/philo_three.dir/philo_three/philo_three.c.obj"
-  "C:/Users/79199/projects/Philosophers/philo_three/utils.c" "C:/Users/79199/projects/Philosophers/cmake-build-debug/CMakeFiles/philo_three.dir/philo_three/utils.c.obj"
-  "C:/Users/79199/projects/Philosophers/philo_three/utils_libft.c" "C:/Users/79199/projects/Philosophers/cmake-build-debug/CMakeFiles/philo_three.dir/philo_three/utils_libft.c.obj"
+  "/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/philo_three.c" "/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles/philo_three.dir/philo_three/philo_three.c.o"
+  "/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/utils.c" "/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles/philo_three.dir/philo_three/utils.c.o"
+  "/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/utils_libft.c" "/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/CMakeFiles/philo_three.dir/philo_three/utils_libft.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

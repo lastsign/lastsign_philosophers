@@ -143,9 +143,10 @@ void 	*check_mortality(void* stat)
 
 void	enjoy_fork(t_philo *philo, int fl, int fr)
 {
-	pthread_mutex_lock(&philo->state->fokes[fl]);
+	pthread_mutex_lock(&philo->state->forks[fl]);
 	print_stat(" has taken a fork\n", philo);
-	pthread_mutex_lock(&philo->state->fokes[fr]);
+	pthread_mutex_lock(&philo->state->forks[fr]);
+	print_stat(" has taken a fork\n", philo);
 }
 
 
@@ -154,7 +155,7 @@ void 	enjoy_sleep(int time_todo)
 	long 	start_sleep;
 
 	start_sleep = get_current_time();
-	while (get_current_time() - start_sleep > time_todo)
+	while (get_current_time() - start_sleep < time_todo)
 		usleep(10);
 }
 
@@ -216,7 +217,6 @@ void 	init_philo(t_state *state)
 
 	i = -1;
 	state->forks = fork;
-	state->is_died = 0;
 	while (++i < state->num_philo)
 	{
 		philo[i].id = i;
@@ -229,7 +229,7 @@ void 	init_philo(t_state *state)
 		pthread_join(pthread[i], NULL);
 	i = -1;
 	while (++i < state->num_philo)
-		pthread_mutex_destroy(state->forks[i]);
+		pthread_mutex_destroy(&state->forks[i]);
 }
 
 int		main(int argc, char **argv)

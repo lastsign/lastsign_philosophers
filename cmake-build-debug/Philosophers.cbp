@@ -8,178 +8,193 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="philo_three">
-				<Option output="C:/Users/79199/projects/Philosophers/cmake-build-debug/philo_three.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
+				<Option output="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/philo_three" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_three"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_three"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="philo_three/fast">
-				<Option output="C:/Users/79199/projects/Philosophers/cmake-build-debug/philo_three.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
+				<Option output="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/philo_three" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_three/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="philo_one">
-				<Option output="C:/Users/79199/projects/Philosophers/cmake-build-debug/philo_one.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_one"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="philo_one/fast">
-				<Option output="C:/Users/79199/projects/Philosophers/cmake-build-debug/philo_one.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_one/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_three/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="philo_two">
-				<Option output="C:/Users/79199/projects/Philosophers/cmake-build-debug/philo_two.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
+				<Option output="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/philo_two" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_two"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_two"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="philo_two/fast">
-				<Option output="C:/Users/79199/projects/Philosophers/cmake-build-debug/philo_two.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
+				<Option output="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/philo_two" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_two/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_two/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/79199/projects/Philosophers/cmake-build-debug"/>
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/79199/projects/Philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="philo_one">
+				<Option output="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/philo_one" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_one"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="philo_one/fast">
+				<Option output="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/philo_one" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_one/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ptycho/Documents/42cursus/lastsign_philosophers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_one/philo_one.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_one/philo_one.c">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_one/philo_one.h">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_one/philo_one.h">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_one/utils.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_one/utils.c">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_one/utils_libft.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_one/utils_libft.c">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_three/philo_three.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/philo_three.c">
 			<Option target="philo_three"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_three/philo_three.h">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/philo_three.h">
 			<Option target="philo_three"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_three/utils.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/utils.c">
 			<Option target="philo_three"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_three/utils_libft.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/utils_libft.c">
 			<Option target="philo_three"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_two/philo_three.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_two.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_two/utils.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/philo_two.h">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/philo_two/utils_libft.c">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/utils.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="C:/Users/79199/projects/Philosophers/CMakeLists.txt">
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/utils_libft.c">
+			<Option target="philo_two"/>
+		</Unit>
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
