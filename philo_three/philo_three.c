@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <signal.h>
 
 int		ft_atoi(const char *str)
 {
@@ -70,8 +71,12 @@ int 	init_semaphoras(t_state *state)
 	sem_unlink("forks");
 	sem_unlink("death");
 	sem_unlink("stat");
+	sem_unlink("someone_is_died");
 	state->out = sem_open("out", O_CREAT, 0660, 1);
 	if (state->out < 0)
+		return (0);
+	state->someone_is_died = sem_open("someone_is_died", O_CREAT, 0660, 1);
+	if (state->someone_is_died < 0)
 		return (0);
 	state->wait = sem_open("wait", O_CREAT, 0660, 1);
 	if (state->wait < 0)
@@ -85,6 +90,7 @@ int 	init_semaphoras(t_state *state)
 	state->stat = sem_open("stat", O_CREAT, 0660, 1);
 	if (state->stat < 0)
 		return (0);
+	return (1);
 }
 
 int		get_info_from_argum(int argc, char **argv, t_state *state)
@@ -151,6 +157,7 @@ void 	*check_mortality(void* stat)
 	print_stat(" is dead\n", philo);
 	philo->state->is_died = 1;
 	sem_post(philo->state->death);
+	sem_post(philo->state->someone_is_died);
 	return (NULL);
 }
 
@@ -212,26 +219,35 @@ void 	*start_simulation(void *stat)
 void 	init_philo(t_state *state)
 {
 	int 			i;
-	t_philo 		philo[state->num_philo];
-	pthread_t		pthread[state->num_philo];
+	t_philo 		*philo;
+	pid_t			process;
+	int				*forks_for_philo;
 
-	i = -1;
+	philo = malloc(sizeof(t_philo) * state->num_philo);
+	forks_for_philo = malloc(sizeof(int) * state->num_philo);
+	i = 0;
 	state->is_died = 0;
-	while (++i < state->num_philo)
+	sem_wait(state->someone_is_died);
+	while (i < state->num_philo)
 	{
-		philo[i].id = i;
-		philo[i].state = state;
-		philo[i].must_eat = state->must_eat;
-		pthread_create(&pthread[i], NULL, start_simulation, &philo[i]);
+		process = fork();
+		if (process == 0)
+		{
+			philo[i].id = i;
+			philo[i].state = state;
+			philo[i].must_eat = state->must_eat;
+			start_simulation(&philo[i]);
+			exit(0);
+		}
+		else
+			forks_for_philo[i++] = process;
 	}
+	sem_post(state->someone_is_died);
 	i = -1;
 	while (++i < state->num_philo)
-		pthread_join(pthread[i], NULL);
-	sem_close(state->forks);
-	sem_close(state->wait);
-	sem_close(state->out);
-	sem_close(state->stat);
-	sem_close(state->death);
+		kill(forks_for_philo[i], SIGSEGV);
+	free(forks_for_philo);
+	free(philo);
 }
 
 int		main(int argc, char **argv)
@@ -246,6 +262,11 @@ int		main(int argc, char **argv)
 			return (0);
 		}
 		init_philo(&state);
+		sem_close(state.forks);
+		sem_close(state.wait);
+		sem_close(state.out);
+		sem_close(state.stat);
+		sem_close(state.death);
 	}
 	else
 		write(1, "Wrong number of arguments\n", 26);

@@ -29,6 +29,7 @@ typedef struct		s_state
 	sem_t			*out;
 	sem_t			*stat;
 	sem_t			*wait;
+	sem_t			*someone_is_died;
 }					t_state;
 
 typedef struct		s_philo
