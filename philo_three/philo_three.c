@@ -180,9 +180,9 @@ void	enjoy_meal(t_philo *philo)
 	print_stat(" has taken a fork\n", philo);
 	sem_post(philo->state->wait);
 	print_stat(" is eating\n", philo);
-	pthread_mutex_lock(&philo->state->stat);
+	sem_wait(philo->state->stat);
 	philo->meal_last = get_current_time();
-	pthread_mutex_unlock(&philo->state->stat);
+	sem_wait(philo->state->stat);
 	enjoy_sleep(philo->state->time_eat);
 	sem_post(philo->state->forks);
 	sem_post(philo->state->forks);
