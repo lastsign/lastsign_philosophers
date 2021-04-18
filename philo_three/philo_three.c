@@ -152,7 +152,7 @@ void 	*check_mortality(void* stat)
 		usleep(10);
 	}
 	sem_post(philo->state->stat);
-	if (!philo->state->must_eat)
+	if (philo->state->must_eat)
 		return (NULL);
 	print_stat(" is dead\n", philo);
 	philo->state->is_died = 1;

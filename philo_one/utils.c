@@ -12,10 +12,10 @@
 
 #include <sys/time.h>
 
-long 	get_current_time(void)
+long	get_current_time(void)
 {
-	struct timeval timeval;
+	struct timeval	timeval;
+
 	gettimeofday(&timeval, NULL);
 	return (timeval.tv_sec * 1000 + timeval.tv_usec / 1000);
 }
-

@@ -46,7 +46,7 @@ char	*ft_itoa_special(char *str, char *tra)
 	return (str);
 }
 
-char	*ft_itoa(long n)
+char 	*ft_itoa(long n)
 {
 	int		m;
 	int		len;
@@ -61,7 +61,7 @@ char	*ft_itoa(long n)
 		len++;
 		m /= 10;
 	}
-	str = (char*)malloc(sizeof(char) * (len + 1));
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	if (n == -2147483648)
@@ -76,7 +76,7 @@ char	*ft_itoa(long n)
 
 size_t	ft_strlen(const char *str)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])

@@ -15,32 +15,32 @@
 # include <semaphore.h>
 # include <pthread.h>
 
-typedef struct		s_state
+typedef struct s_state
 {
-	int				num_philo;
-	int				time_die;
-	int 			time_eat;
-	int				time_sleep;
-	int	 			must_eat;
-	long 			meal_start;
-	int 			is_died;
-	sem_t			*forks;
-	sem_t			*death;
-	sem_t			*out;
-	sem_t			*stat;
-	sem_t			*wait;
+	int		num_philo;
+	int		time_die;
+	int		time_eat;
+	int		time_sleep;
+	int		must_eat;
+	long	meal_start;
+	int		is_died;
+	sem_t	*forks;
+	sem_t	*death;
+	sem_t	*out;
+	sem_t	*stat;
+	sem_t	*wait;
 }					t_state;
 
-typedef struct		s_philo
+typedef struct s_philo
 {
-	int 			id;
-	int 			must_eat;
-	long 			meal_last;
-	long 			meal_start;
-	t_state			*state;
+	int		id;
+	int		must_eat;
+	long	meal_last;
+	long	meal_start;
+	t_state	*state;
 }					t_philo;
 
-long 				get_current_time(void);
+long				get_current_time(void);
 char				*ft_itoa(long n);
 size_t				ft_strlen(const char *str);
 

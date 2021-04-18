@@ -173,6 +173,9 @@
 		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/philo_three.c">
 			<Option target="philo_three"/>
 		</Unit>
+		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/philo_three.h">
+			<Option target="philo_three"/>
+		</Unit>
 		<Unit filename="/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_three/utils.c">
 			<Option target="philo_three"/>
 		</Unit>
