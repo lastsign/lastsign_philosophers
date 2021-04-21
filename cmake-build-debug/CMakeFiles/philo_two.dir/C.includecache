@@ -22,11 +22,3 @@ semaphore.h
 pthread.h
 -
 
-/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/utils.c
-sys/time.h
--
-
-/Users/ptycho/Documents/42cursus/lastsign_philosophers/philo_two/utils_libft.c
-stdlib.h
--
-

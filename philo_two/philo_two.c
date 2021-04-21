@@ -146,7 +146,7 @@ void	*check_mortality(void *stat)
 		usleep(10);
 	}
 	sem_post(philo->state->stat);
-	if (philo->state->must_eat)
+	if (!philo->state->must_eat)
 		return (NULL);
 	print_stat(" is dead\n", philo);
 	philo->state->is_died = 1;
@@ -189,6 +189,7 @@ void 	*start_simulation(void *stat)
 	philo->meal_start = get_current_time();
 	philo->meal_last = get_current_time();
 	pthread_create(&death, NULL, check_mortality, philo);
+//	pthread_detach(death);
 	while (philo->must_eat)
 	{
 		if (philo->state->is_died)
@@ -203,7 +204,7 @@ void 	*start_simulation(void *stat)
 		print_stat(" is thinking\n", philo);
 		philo->must_eat--;
 	}
-	pthread_join(death, NULL);
+//	pthread_join(death, NULL);
 	return (NULL);
 }
 

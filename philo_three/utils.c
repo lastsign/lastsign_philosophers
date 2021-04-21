@@ -12,7 +12,8 @@
 
 #include <sys/time.h>
 
-long 	get_current_time(void)
+long
+get_current_time(void)
 {
 	struct timeval	timeval;
 
